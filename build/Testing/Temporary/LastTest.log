@@ -1,0 +1,30 @@
+Start testing: Sep 16 16:05 PDT
+----------------------------------------------------------
+1/1 Testing: ProjectSetupTest.GoogleTestWorks
+1/1 Test: ProjectSetupTest.GoogleTestWorks
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=ProjectSetupTest.GoogleTestWorks" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"ProjectSetupTest.GoogleTestWorks" start time: Sep 16 16:05 PDT
+Output:
+----------------------------------------------------------
+Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ProjectSetupTest.GoogleTestWorks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProjectSetupTest
+[ RUN      ] ProjectSetupTest.GoogleTestWorks
+[       OK ] ProjectSetupTest.GoogleTestWorks (0 ms)
+[----------] 1 test from ProjectSetupTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ProjectSetupTest.GoogleTestWorks" end time: Sep 16 16:05 PDT
+"ProjectSetupTest.GoogleTestWorks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 16 16:05 PDT

@@ -1,0 +1,17 @@
+{
+  "tests": 1,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ProjectSetupTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "GoogleTestWorks",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/smoke_test.cpp",
+          "line": 3
+        }
+      ]
+    }
+  ]
+}
