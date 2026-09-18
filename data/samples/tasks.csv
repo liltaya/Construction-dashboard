@@ -1,0 +1,4 @@
+id,project_id,name,description,status,priority,start_date,due_date,completed_at,estimated_cost
+1,1,Foundation Excavation,Excavate building foundation,completed,critical,2026-01-15,2026-02-10,2026-02-08,275000
+2,1,Concrete Foundation,Pour reinforced concrete foundation,in_progress,high,2026-02-11,2026-03-15,,430000
+3,2,Electrical Rough-In,Install electrical rough-in,todo,medium,2026-06-01,2026-07-01,,85000

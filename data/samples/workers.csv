@@ -1,0 +1,4 @@
+id,first_name,last_name,email,phone,role,hourly_rate,active
+1,John,Smith,john.smith@example.com,6045550101,Carpenter,42.50,true
+2,Sarah,Lee,sarah.lee@example.com,6045550102,Electrician,48.00,true
+3,Michael,Brown,michael.brown@example.com,6045550103,Site Supervisor,55.00,true

@@ -1,0 +1,4 @@
+id,project_id,task_id,category,description,amount,entry_date
+1,1,1,equipment,Excavator rental,18500,2026-01-20
+2,1,2,material,Foundation concrete,42000,2026-02-15
+3,1,,permit,Building permit,15000,2026-01-10

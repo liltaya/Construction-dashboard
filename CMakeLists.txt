@@ -69,7 +69,12 @@ if(BUILD_TESTING)
 
     add_executable(
         ConstructionDashboardTests
+
         tests/smoke_test.cpp
+        tests/csv_import_test.cpp
+
+        src/csv/CsvParser.cpp
+        src/csv/CsvImporter.cpp
     )
 
     target_include_directories(
@@ -81,6 +86,7 @@ if(BUILD_TESTING)
     target_link_libraries(
         ConstructionDashboardTests
         PRIVATE
+            Qt6::Core
             GTest::gtest_main
     )
 
