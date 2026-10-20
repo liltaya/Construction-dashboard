@@ -1,0 +1,2 @@
+CMakeFiles/ConstructionDashboardTests.dir/ConstructionDashboardTests_autogen/mocs_compilation.cpp.o: \
+  /Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests_autogen/mocs_compilation.cpp

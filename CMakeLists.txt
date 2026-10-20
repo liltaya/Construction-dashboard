@@ -28,7 +28,27 @@ qt_add_executable(
     src/main.cpp
     src/MainWindow.cpp
 
+    src/csv/CsvParser.cpp
+    src/csv/CsvImporter.cpp
+
+    src/database/Database.cpp
+    src/repositories/ConstructionRepository.cpp
+    src/services/DashboardService.cpp
+    src/analytics/AnalyticsEngine.cpp
+
     include/construction/MainWindow.h
+
+    include/construction/database/Database.h
+    include/construction/repositories/ConstructionRepository.h
+    include/construction/services/DashboardService.h
+    include/construction/analytics/AnalyticsEngine.h
+
+    include/construction/models/Project.h
+    include/construction/models/Task.h
+    include/construction/models/Worker.h
+    include/construction/models/CostEntry.h
+    include/construction/models/Incident.h
+    include/construction/models/WorkLog.h
 )
 
 target_include_directories(
@@ -43,6 +63,7 @@ target_link_libraries(
         Qt6::Core
         Qt6::Widgets
         Qt6::Sql
+        GTest::gtest_main
 )
 
 target_compile_options(
@@ -72,9 +93,11 @@ if(BUILD_TESTING)
 
         tests/smoke_test.cpp
         tests/csv_import_test.cpp
+        tests/analytics_test.cpp
 
         src/csv/CsvParser.cpp
         src/csv/CsvImporter.cpp
+        src/analytics/AnalyticsEngine.cpp
     )
 
     target_include_directories(

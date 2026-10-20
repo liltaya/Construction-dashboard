@@ -30,6 +30,9 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
 
+//Enable/Disable color output during build.
+CMAKE_COLOR_MAKEFILE:BOOL=ON
+
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
@@ -83,9 +86,6 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
-
-//Enable/Disable output of build database during the build.
-CMAKE_EXPORT_BUILD_DATABASE:BOOL=
 
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
@@ -150,8 +150,8 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
-//Program used to build from build.ninja files.
-CMAKE_MAKE_PROGRAM:FILEPATH=/opt/homebrew/bin/ninja
+//Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -192,12 +192,6 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 //The product will be built against the headers and libraries located
 // inside the indicated SDK.
 CMAKE_OSX_SYSROOT:STRING=
-
-//Semicolon-separated list of installation prefixes searched by
-// find_package(), find_program(), find_library(), find_file(),
-// and find_path(). Empty by default; intended to be set by the
-// project or the user.
-CMAKE_PREFIX_PATH:UNINITIALIZED=/opt/homebrew/opt/qt
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -351,7 +345,7 @@ GTEST_HAS_ABSL:BOOL=OFF
 INSTALL_GTEST:BOOL=ON
 
 //Path to a program.
-MACDEPLOYQT_EXECUTABLE:FILEPATH=/opt/homebrew/opt/qt/bin/macdeployqt
+MACDEPLOYQT_EXECUTABLE:FILEPATH=/opt/homebrew/bin/macdeployqt
 
 //Command to build the project
 MAKECOMMAND:STRING=/opt/homebrew/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
@@ -382,37 +376,37 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
-Qt6CoreTools_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6CoreTools
+Qt6CoreTools_DIR:PATH=/opt/homebrew/lib/cmake/Qt6CoreTools
 
 //The directory containing a CMake configuration file for Qt6Core.
-Qt6Core_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Core
+Qt6Core_DIR:PATH=/opt/homebrew/lib/cmake/Qt6Core
 
 //The directory containing a CMake configuration file for Qt6DBusTools.
-Qt6DBusTools_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6DBusTools
+Qt6DBusTools_DIR:PATH=/opt/homebrew/lib/cmake/Qt6DBusTools
 
 //The directory containing a CMake configuration file for Qt6DBus.
-Qt6DBus_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6DBus
+Qt6DBus_DIR:PATH=/opt/homebrew/lib/cmake/Qt6DBus
 
 //The directory containing a CMake configuration file for Qt6GuiTools.
-Qt6GuiTools_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6GuiTools
+Qt6GuiTools_DIR:PATH=/opt/homebrew/lib/cmake/Qt6GuiTools
 
 //The directory containing a CMake configuration file for Qt6Gui.
-Qt6Gui_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Gui
+Qt6Gui_DIR:PATH=/opt/homebrew/lib/cmake/Qt6Gui
 
 //The directory containing a CMake configuration file for Qt6Sql.
-Qt6Sql_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Sql
+Qt6Sql_DIR:PATH=/opt/homebrew/lib/cmake/Qt6Sql
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
-Qt6WidgetsTools_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6WidgetsTools
+Qt6WidgetsTools_DIR:PATH=/opt/homebrew/lib/cmake/Qt6WidgetsTools
 
 //The directory containing a CMake configuration file for Qt6Widgets.
-Qt6Widgets_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Widgets
+Qt6Widgets_DIR:PATH=/opt/homebrew/lib/cmake/Qt6Widgets
 
 //The directory containing a CMake configuration file for Qt6.
-Qt6_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6
+Qt6_DIR:PATH=/opt/homebrew/lib/cmake/Qt6
 
 //Name of the computer/site where compile is being run
-SITE:STRING=MacBook-Air-Taya-9056.local
+SITE:STRING=MacBook-Air-Taya-9305.local
 
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
@@ -489,6 +483,8 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=4
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+//ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
+CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 //Path to cpack program executable.
@@ -542,14 +538,12 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_BUILD_DATABASE
-CMAKE_EXPORT_BUILD_DATABASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Ninja
+CMAKE_GENERATOR:INTERNAL=Unix Makefiles
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.

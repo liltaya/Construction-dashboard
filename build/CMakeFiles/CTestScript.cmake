@@ -37,7 +37,7 @@ set(CTEST_P4_UPDATE_CUSTOM "")
 set(CTEST_P4_UPDATE_OPTIONS "")
 
 # CTest Configure Step
-set(CTEST_CMAKE_GENERATOR "Ninja")
+set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_LABELS_FOR_SUBPROJECTS "")
 
 # CTest Build Step
@@ -62,7 +62,7 @@ set(CTEST_MEMORYCHECK_SANITIZER_OPTIONS "")
 set(CTEST_MEMORYCHECK_SUPPRESSIONS_FILE "")
 
 # CTest Submit Step
-set(CTEST_SITE "MacBook-Air-Taya-9056.local")
+set(CTEST_SITE "MacBook-Air-Taya-9305.local")
 set(CTEST_BUILD_NAME "Darwin-c++")
 set(CTEST_SUBMIT_URL "http://")
 set(CTEST_SUBMIT_INACTIVITY_TIMEOUT "")
