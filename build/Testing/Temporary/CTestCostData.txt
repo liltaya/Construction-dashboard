@@ -1,9 +1,9 @@
-ProjectSetupTest.GoogleTestWorks 1 0.0300834
-CsvImporterTest.ImportsValidProject 1 0.0324176
-CsvImporterTest.RejectsInvalidProjectStatus 1 0.0249366
-CsvImporterTest.RejectsNegativeProjectBudget 1 0.0230727
-CsvImporterTest.AllowsCostWithoutTask 1 0.0292674
-CsvImporterTest.RejectsWrongHeader 1 0.0204777
-CsvParserTest.HandlesQuotedComma 1 0.0235656
-AnalyticsEngineTest.CalculatesMetrics 1 0.0228465
+ProjectSetupTest.GoogleTestWorks 2 0.0496238
+CsvImporterTest.ImportsValidProject 2 0.016284
+CsvImporterTest.RejectsInvalidProjectStatus 2 0.0119118
+CsvImporterTest.RejectsNegativeProjectBudget 2 0.0117458
+CsvImporterTest.AllowsCostWithoutTask 2 0.010964
+CsvImporterTest.RejectsWrongHeader 2 0.0121837
+CsvParserTest.HandlesQuotedComma 2 0.013073
+AnalyticsEngineTest.CalculatesMetrics 2 0.0116012
 ---

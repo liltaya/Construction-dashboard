@@ -35,6 +35,9 @@ public:
     void insertWorkLog(const WorkLog& workLog);
     std::vector<WorkLog> findWorkLogsByProject(std::int64_t projectId);
 
+    std::int64_t countIncidentsByProject(
+    std::int64_t projectId);
+
 private:
     Database& database_;
 };

@@ -147,6 +147,23 @@ void Database::createSchema()
                 ON DELETE CASCADE
         );
     )");
+
+    execute(R"(
+        CREATE TABLE IF NOT EXISTS incidents (
+            id INTEGER PRIMARY KEY,
+            project_id INTEGER NOT NULL,
+            title TEXT NOT NULL,
+            description TEXT NOT NULL,
+            severity TEXT NOT NULL,
+            status TEXT NOT NULL,
+            incident_date TEXT NOT NULL,
+
+            FOREIGN KEY (project_id)
+                REFERENCES projects(id)
+                ON DELETE CASCADE
+        );
+    )");
+
 }
 
 }

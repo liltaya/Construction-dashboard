@@ -17,7 +17,7 @@ void throwIfFailed(const QSqlQuery& query)
     );
 }
 
-}
+} 
 
 ConstructionRepository::ConstructionRepository(
     Database& database
@@ -399,6 +399,7 @@ void ConstructionRepository::insertCostEntry(
     }
 }
 
+
 std::vector<CostEntry>
 ConstructionRepository::findCostsByProject(
     std::int64_t projectId
@@ -442,15 +443,51 @@ ConstructionRepository::findCostsByProject(
             entry.taskId = query.value(2).toLongLong();
         }
 
-        entry.category = query.value(3).toString().toStdString();
-        entry.description = query.value(4).toString().toStdString();
+        entry.category =
+            query.value(3).toString().toStdString();
+
+        entry.description =
+            query.value(4).toString().toStdString();
+
         entry.amount = query.value(5).toDouble();
-        entry.entryDate = query.value(6).toString().toStdString();
+
+        entry.entryDate =
+            query.value(6).toString().toStdString();
 
         entries.push_back(entry);
     }
 
     return entries;
+}
+
+std::int64_t
+ConstructionRepository::countIncidentsByProject(
+    std::int64_t projectId
+)
+{
+    QSqlQuery query(database_.connection());
+
+    query.prepare(R"(
+        SELECT COUNT(*)
+        FROM incidents
+        WHERE project_id = ?;
+    )");
+
+    query.addBindValue(
+        static_cast<qlonglong>(projectId)
+    );
+
+    if (!query.exec())
+    {
+        throwIfFailed(query);
+    }
+
+    if (query.next())
+    {
+        return query.value(0).toLongLong();
+    }
+
+    return 0;
 }
 
 void ConstructionRepository::insertWorkLog(
@@ -527,4 +564,4 @@ ConstructionRepository::findWorkLogsByProject(
     return workLogs;
 }
 
-}
+} 
