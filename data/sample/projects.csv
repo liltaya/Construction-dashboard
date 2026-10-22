@@ -1,0 +1,4 @@
+id,name,description,location,start_date,end_date,status,budget
+1,Tower A,Residential construction,Burnaby,2026-01-01,2026-12-31,active,1200000
+2,Commercial Plaza,Retail development,Vancouver,2026-02-01,2027-03-31,active,2500000
+3,Warehouse Expansion,Industrial project,Surrey,2026-04-01,2027-06-30,planned,1800000

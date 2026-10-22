@@ -1,0 +1,4 @@
+id,project_id,task_id,category,description,amount,entry_date
+1,1,1,materials,Concrete,150000,2026-02-10
+2,1,,permit,Building permit,25000,2026-01-10
+3,2,3,equipment,Excavator rental,45000,2026-03-01

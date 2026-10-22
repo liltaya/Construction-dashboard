@@ -1,0 +1,103 @@
+
+name: Construction Dashboard CI
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and Unit Tests
+    runs-on: ubuntu-24.04
+
+    env:
+      QT_QPA_PLATFORM: offscreen
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            qt6-base-dev \
+            qt6-base-dev-tools \
+            libqt6sql6-sqlite \
+            libgtest-dev
+
+      - name: Configure
+        run: |
+          cmake -S . -B build \
+            -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DBUILD_TESTING=ON \
+            -DENABLE_WARNINGS=ON \
+            -DENABLE_SANITIZERS=OFF
+
+      - name: Build
+        run: cmake --build build --parallel 2
+
+      - name: Run tests
+        run: |
+          ctest --test-dir build \
+            --output-on-failure
+
+  sanitizers:
+    name: AddressSanitizer and UBSan
+    runs-on: ubuntu-24.04
+    needs: build-and-test
+
+    env:
+      QT_QPA_PLATFORM: offscreen
+      ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+      UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            clang \
+            cmake \
+            ninja-build \
+            qt6-base-dev \
+            qt6-base-dev-tools \
+            libqt6sql6-sqlite \
+            libgtest-dev
+
+      - name: Configure with sanitizers
+        run: |
+          cmake -S . -B build-sanitized \
+            -G Ninja \
+            -DCMAKE_C_COMPILER=clang \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DBUILD_TESTING=ON \
+            -DENABLE_WARNINGS=ON \
+            -DENABLE_SANITIZERS=ON
+
+      - name: Build with sanitizers
+        run: |
+          cmake --build build-sanitized \
+            --parallel 2
+
+      - name: Run sanitized tests
+        run: |
+          ctest --test-dir build-sanitized \
+            --output-on-failure

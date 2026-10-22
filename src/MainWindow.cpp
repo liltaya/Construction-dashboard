@@ -14,6 +14,10 @@
 #include <QVariant>
 #include <QAbstractItemView>
 #include <QFont>
+#include <QMessageBox>
+#include <QDebug>
+#include <exception>
+#include "construction/utils/Logger.h"
 
 #include <algorithm>
 #include <vector>
@@ -552,45 +556,74 @@ void MainWindow::buildWorkforcePage()
 
 void MainWindow::loadProjects()
 {
-    const auto projects = service_.getProjects();
-
-    projectSelector_->blockSignals(true);
-    projectSelector_->clear();
-
-    for (const auto& project : projects)
+    try
     {
-        projectSelector_->addItem(
-            QString::fromStdString(project.name),
-            QVariant::fromValue(
-                static_cast<qlonglong>(project.id)
-            )
-        );
+        const auto projects = service_.getProjects();
+
+        projectSelector_->blockSignals(true);
+        projectSelector_->clear();
+
+        for (const auto& project : projects)
+        {
+            projectSelector_->addItem(
+                QString::fromStdString(project.name),
+                QVariant::fromValue(
+                    static_cast<qlonglong>(project.id)
+                )
+            );
+        }
+
+        projectSelector_->blockSignals(false);
+
+        if (projectSelector_->count() > 0)
+        {
+            refreshDashboard();
+        }
     }
-
-    projectSelector_->blockSignals(false);
-
-    if (projectSelector_->count() > 0)
+    catch (...)
     {
-        refreshDashboard();
+        projectSelector_->blockSignals(false);
+        throw;
     }
 }
 
 //REFRESH ALL TABS
 
-void MainWindow::refreshDashboard()
-{
+void MainWindow::refreshDashboard() {
     if (projectSelector_->currentIndex() < 0)
     {
         return;
     }
 
-    const std::int64_t id =
-        projectSelector_->currentData().toLongLong();
+    try
+    {
+        const std::int64_t projectId =
+            projectSelector_->currentData().toLongLong();
 
-    refreshOverview(id);
-    refreshCosts(id);
-    refreshSchedule(id);
-    refreshWorkforce(id);
+        Logger::instance().info(
+            QString("Loading project %1").arg(projectId)
+        );
+
+        refreshOverview(projectId);
+        refreshCosts(projectId);
+        refreshSchedule(projectId);
+        refreshWorkforce(projectId);
+    }
+    catch (const std::exception& exception)
+    {
+        const QString message =
+            QString::fromUtf8(exception.what());
+
+        Logger::instance().error(
+            "Dashboard refresh failed: " + message
+        );
+
+        QMessageBox::warning(
+            this,
+            "Dashboard Error",
+            "Unable to load project data:\n\n" + message
+        );
+    }
 }
 
 //REFRESH OVERVIEW

@@ -1,13 +1,53 @@
 #include "construction/csv/CsvImporter.h"
-
 #include "construction/csv/CsvParser.h"
+#include "construction/csv/CsvValidator.h"
+#include "construction/utils/Logger.h"
 
+#include <QFile>
+#include <QIODevice>
 #include <QSet>
+
+#include <cstdint>
+#include <stdexcept>
 
 namespace construction {
 
 namespace {
 
+// Validate the complete CSV before parsing.
+bool validateCsvFile(
+    const QString& filePath,
+    QString& error
+)
+{
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        error = file.errorString();
+        return false;
+    }
+
+    const QString csvContent =
+        QString::fromUtf8(file.readAll());
+
+    const auto validation =
+        CsvValidator::validate(csvContent);
+
+    if (!validation.valid)
+    {
+        Logger::instance().warning(
+            "CSV rejected: " + validation.error
+        );
+
+        error = validation.error;
+        return false;
+    }
+
+    return true;
+}
+
+// Parse a non-negative integer ID.
 bool parseId(
     const QString& value,
     std::int64_t& destination
@@ -23,11 +63,10 @@ bool parseId(
     }
 
     destination = static_cast<std::int64_t>(parsed);
-
     return true;
 }
 
-
+// Parse a non-negative decimal number.
 bool parsePositiveDouble(
     const QString& value,
     double& destination
@@ -43,11 +82,10 @@ bool parsePositiveDouble(
     }
 
     destination = parsed;
-
     return true;
 }
 
-
+// Parse supported boolean values.
 bool parseBoolean(
     const QString& value,
     bool& destination
@@ -79,7 +117,6 @@ bool parseBoolean(
     return false;
 }
 
-
 bool validProjectStatus(const QString& status)
 {
     static const QSet<QString> allowed {
@@ -92,7 +129,6 @@ bool validProjectStatus(const QString& status)
 
     return allowed.contains(status);
 }
-
 
 bool validTaskStatus(const QString& status)
 {
@@ -107,7 +143,6 @@ bool validTaskStatus(const QString& status)
     return allowed.contains(status);
 }
 
-
 bool validPriority(const QString& priority)
 {
     static const QSet<QString> allowed {
@@ -119,7 +154,6 @@ bool validPriority(const QString& priority)
 
     return allowed.contains(priority);
 }
-
 
 bool validCostCategory(const QString& category)
 {
@@ -136,7 +170,6 @@ bool validCostCategory(const QString& category)
     return allowed.contains(category);
 }
 
-
 bool validIncidentType(const QString& type)
 {
     static const QSet<QString> allowed {
@@ -151,7 +184,6 @@ bool validIncidentType(const QString& type)
     return allowed.contains(type);
 }
 
-
 bool validSeverity(const QString& severity)
 {
     static const QSet<QString> allowed {
@@ -164,11 +196,20 @@ bool validSeverity(const QString& severity)
     return allowed.contains(severity);
 }
 
-} 
+} // anonymous namespace
+
 CsvImporter::ImportResult<Project>
 CsvImporter::importProjects(const QString& filePath)
 {
     ImportResult<Project> result;
+
+    QString validationError;
+
+    if (!validateCsvFile(filePath, validationError))
+    {
+        result.errors.push_back(validationError);
+        return result;
+    }
 
     const auto parsed = CsvParser::parseFile(filePath);
 
@@ -200,7 +241,6 @@ CsvImporter::importProjects(const QString& filePath)
         result.errors.push_back(
             "Invalid project CSV header."
         );
-
         return result;
     }
 
@@ -223,7 +263,6 @@ CsvImporter::importProjects(const QString& filePath)
                     .arg(expectedHeader.size())
                     .arg(row.size())
             );
-
             continue;
         }
 
@@ -235,7 +274,6 @@ CsvImporter::importProjects(const QString& filePath)
                 QString("Row %1: invalid project id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -245,7 +283,6 @@ CsvImporter::importProjects(const QString& filePath)
                 QString("Row %1: project name is required.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -266,7 +303,6 @@ CsvImporter::importProjects(const QString& filePath)
                     .arg(rowNumber)
                     .arg(row[6])
             );
-
             continue;
         }
 
@@ -278,7 +314,6 @@ CsvImporter::importProjects(const QString& filePath)
                 QString("Row %1: invalid project budget.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -287,10 +322,19 @@ CsvImporter::importProjects(const QString& filePath)
 
     return result;
 }
+
 CsvImporter::ImportResult<Task>
 CsvImporter::importTasks(const QString& filePath)
 {
     ImportResult<Task> result;
+
+    QString validationError;
+
+    if (!validateCsvFile(filePath, validationError))
+    {
+        result.errors.push_back(validationError);
+        return result;
+    }
 
     const auto parsed = CsvParser::parseFile(filePath);
 
@@ -324,7 +368,6 @@ CsvImporter::importTasks(const QString& filePath)
         result.errors.push_back(
             "Invalid task CSV header."
         );
-
         return result;
     }
 
@@ -345,7 +388,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: incorrect number of task fields.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -357,7 +399,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: invalid task id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -367,7 +408,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: invalid project id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -377,7 +417,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: task name is required.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -393,7 +432,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: invalid task status.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -408,7 +446,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: invalid task priority.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -429,7 +466,6 @@ CsvImporter::importTasks(const QString& filePath)
                 QString("Row %1: invalid estimated cost.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -438,10 +474,19 @@ CsvImporter::importTasks(const QString& filePath)
 
     return result;
 }
+
 CsvImporter::ImportResult<Worker>
 CsvImporter::importWorkers(const QString& filePath)
 {
     ImportResult<Worker> result;
+
+    QString validationError;
+
+    if (!validateCsvFile(filePath, validationError))
+    {
+        result.errors.push_back(validationError);
+        return result;
+    }
 
     const auto parsed = CsvParser::parseFile(filePath);
 
@@ -473,7 +518,6 @@ CsvImporter::importWorkers(const QString& filePath)
         result.errors.push_back(
             "Invalid worker CSV header."
         );
-
         return result;
     }
 
@@ -494,7 +538,6 @@ CsvImporter::importWorkers(const QString& filePath)
                 QString("Row %1: incorrect number of worker fields.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -506,7 +549,6 @@ CsvImporter::importWorkers(const QString& filePath)
                 QString("Row %1: invalid worker id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -519,7 +561,6 @@ CsvImporter::importWorkers(const QString& filePath)
                 QString("Row %1: worker first and last name are required.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -541,7 +582,6 @@ CsvImporter::importWorkers(const QString& filePath)
                 QString("Row %1: invalid hourly rate.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -551,7 +591,6 @@ CsvImporter::importWorkers(const QString& filePath)
                 QString("Row %1: active must be true/false, yes/no, or 1/0.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -560,10 +599,19 @@ CsvImporter::importWorkers(const QString& filePath)
 
     return result;
 }
+
 CsvImporter::ImportResult<CostEntry>
 CsvImporter::importCostEntries(const QString& filePath)
 {
     ImportResult<CostEntry> result;
+
+    QString validationError;
+
+    if (!validateCsvFile(filePath, validationError))
+    {
+        result.errors.push_back(validationError);
+        return result;
+    }
 
     const auto parsed = CsvParser::parseFile(filePath);
 
@@ -594,7 +642,6 @@ CsvImporter::importCostEntries(const QString& filePath)
         result.errors.push_back(
             "Invalid cost CSV header."
         );
-
         return result;
     }
 
@@ -615,7 +662,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                 QString("Row %1: incorrect number of cost fields.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -627,7 +673,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                 QString("Row %1: invalid cost id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -637,7 +682,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                 QString("Row %1: invalid project id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -651,7 +695,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                     QString("Row %1: invalid task id.")
                         .arg(rowNumber)
                 );
-
                 continue;
             }
 
@@ -667,7 +710,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                 QString("Row %1: invalid cost category.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -680,7 +722,6 @@ CsvImporter::importCostEntries(const QString& filePath)
                 QString("Row %1: invalid cost amount.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -691,10 +732,19 @@ CsvImporter::importCostEntries(const QString& filePath)
 
     return result;
 }
+
 CsvImporter::ImportResult<Incident>
 CsvImporter::importIncidents(const QString& filePath)
 {
     ImportResult<Incident> result;
+
+    QString validationError;
+
+    if (!validateCsvFile(filePath, validationError))
+    {
+        result.errors.push_back(validationError);
+        return result;
+    }
 
     const auto parsed = CsvParser::parseFile(filePath);
 
@@ -729,7 +779,6 @@ CsvImporter::importIncidents(const QString& filePath)
         result.errors.push_back(
             "Invalid incident CSV header."
         );
-
         return result;
     }
 
@@ -750,7 +799,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: incorrect number of incident fields.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -762,7 +810,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: invalid incident id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -772,7 +819,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: invalid project id.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -786,7 +832,6 @@ CsvImporter::importIncidents(const QString& filePath)
                     QString("Row %1: invalid task id.")
                         .arg(rowNumber)
                 );
-
                 continue;
             }
 
@@ -803,7 +848,6 @@ CsvImporter::importIncidents(const QString& filePath)
                     QString("Row %1: invalid worker id.")
                         .arg(rowNumber)
                 );
-
                 continue;
             }
 
@@ -816,7 +860,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: incident title is required.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -826,7 +869,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: incident description is required.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -842,7 +884,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: invalid incident type.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -857,7 +898,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: invalid incident severity.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 
@@ -872,7 +912,6 @@ CsvImporter::importIncidents(const QString& filePath)
                 QString("Row %1: invalid resolved value.")
                     .arg(rowNumber)
             );
-
             continue;
         }
 

@@ -3,6 +3,8 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QUuid>
+#include <QDebug>
+#include <QSqlError>
 
 #include <stdexcept>
 
@@ -51,14 +53,26 @@ QSqlDatabase& Database::connection()
     return database_;
 }
 
+
 void Database::execute(const QString& sql)
 {
     QSqlQuery query(database_);
 
     if (!query.exec(sql))
     {
+        const QString errorMessage =
+            query.lastError().text();
+
+        qCritical()
+            << "Database SQL execution failed:"
+            << errorMessage;
+
         throw std::runtime_error(
-            query.lastError().text().toStdString()
+            QString(
+                "Database operation failed: %1"
+            )
+            .arg(errorMessage)
+            .toStdString()
         );
     }
 }

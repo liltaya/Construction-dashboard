@@ -37,6 +37,9 @@ public:
 
     std::int64_t countIncidentsByProject(
     std::int64_t projectId);
+    void importProjects(
+    const std::vector<Project>& projects
+);
 
 private:
     Database& database_;
