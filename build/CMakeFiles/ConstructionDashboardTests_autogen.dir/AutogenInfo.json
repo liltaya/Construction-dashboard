@@ -33,6 +33,11 @@
 		"/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake",
 		"/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake",
 		"/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTest.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTestUseLaunchers.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTestTargets.cmake",
+		"/opt/homebrew/share/cmake/Modules/DartConfiguration.tcl.in",
+		"/opt/homebrew/share/cmake/Templates/CTestScript.cmake.in",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake",
@@ -416,11 +421,6 @@
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake",
 		"/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTest.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTestUseLaunchers.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTestTargets.cmake",
-		"/opt/homebrew/share/cmake/Modules/DartConfiguration.tcl.in",
-		"/opt/homebrew/share/cmake/Templates/CTestScript.cmake.in",
 		"/opt/homebrew/share/cmake/Modules/FetchContent.cmake",
 		"/opt/homebrew/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake",
 		"/opt/homebrew/share/cmake/Modules/FetchContent/CMakeLists.cmake.in",
@@ -434,7 +434,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_NO_DEBUG" ],
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_NO_DEBUG", "QT_SQL_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -449,6 +449,8 @@
 		"/opt/homebrew/lib/QtCore.framework",
 		"/opt/homebrew/share/qt/mkspecs/macx-clang",
 		"/opt/homebrew/include",
+		"/opt/homebrew/lib/QtSql.framework/Headers",
+		"/opt/homebrew/lib/QtSql.framework",
 		"/Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/include",
 		"/Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest",
 		"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
@@ -508,6 +510,26 @@
 			null
 		],
 		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/tayamamenko/Developer/Construction-dashboard/tests/analytics_test.cpp",
 			"MU",
 			null
@@ -518,7 +540,22 @@
 			null
 		],
 		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/tests/csv_validation_test.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/tests/database_test.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/tayamamenko/Developer/Construction-dashboard/tests/smoke_test.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/tests/test_main.cpp",
 			"MU",
 			null
 		]

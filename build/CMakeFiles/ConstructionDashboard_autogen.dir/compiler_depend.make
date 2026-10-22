@@ -7,6 +7,7 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/MainWindow.h \
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/analytics/AnalyticsEngine.h \
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/database/Database.h \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/logging/Logger.h \
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/CostEntry.h \
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Incident.h \
   /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Project.h \
@@ -19,10 +20,12 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
   /Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvImporter.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvParser.cpp \
+  /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/main.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp \
   /Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp \
+  /Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp \
   /opt/homebrew/bin/cmake \
   /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake \
   /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake \
@@ -459,8 +462,6 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargetsPrecheck.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake:
@@ -551,12 +552,6 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/Qt6Targets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargetsPrecheck.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake:
@@ -619,9 +614,9 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargetsPrecheck.cmake:
 
@@ -765,12 +760,6 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake:
-
 /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsTargetsPrecheck.cmake:
@@ -802,14 +791,6 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 /opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargetsPrecheck.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargetsPrecheck.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginDependencies.cmake:
 
@@ -851,6 +832,8 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
 
+/Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp:
+
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
@@ -864,6 +847,14 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargetsPrecheck.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
 
@@ -893,8 +884,6 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
 
-/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/WorkLog.h:
-
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake:
@@ -915,21 +904,9 @@ ConstructionDashboard_autogen/timestamp: /Users/tayamamenko/Developer/Constructi
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
-/Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake:
 
-CMakeFiles/4.4.3/CMakeCXXCompiler.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
-
-/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicAppleHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
 
@@ -957,13 +934,25 @@ CMakeFiles/4.4.3/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtInstallPaths.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
-
 /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Task.h:
 
+/opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargetsPrecheck.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/Qt6Targets.cmake:
+
+CMakeFiles/4.4.3/CMakeCXXCompiler.cmake:
+
+/Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp:
+
 /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginDependencies.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
 /opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake:
 
@@ -987,31 +976,37 @@ CMakeFiles/4.4.3/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
-/Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp:
+/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
+/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
+/opt/homebrew/lib/cmake/Qt6/QtPublicAppleHelpers.cmake:
 
-/opt/homebrew/share/cmake/Modules/Internal/CheckCommon.cmake:
+/opt/homebrew/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
 
-/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake:
+/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
 
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginAdditionalTargetInfo.cmake:
 
-/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/CostEntry.h:
+/opt/homebrew/bin/cmake:
 
-/Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp:
+/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp:
 
 /opt/homebrew/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake:
 
 /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvParser.cpp:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QMacHeifPluginAdditionalTargetInfo.cmake:
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake:
 
-/opt/homebrew/bin/cmake:
+/Users/tayamamenko/Developer/Construction-dashboard/include/construction/logging/Logger.h:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
+
+/Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
 
@@ -1039,6 +1034,8 @@ CMakeFiles/4.4.3/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
 
+/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/WorkLog.h:
+
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake:
@@ -1058,6 +1055,18 @@ CMakeFiles/4.4.3/CMakeSystem.cmake:
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomRelationshipHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+
+/Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp:
+
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
+
+/opt/homebrew/share/cmake/Modules/Internal/CheckCommon.cmake:
+
+/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
+
+/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/CostEntry.h:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake:
 

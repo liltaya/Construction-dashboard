@@ -142,10 +142,24 @@ CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvImporter.cpp -o CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.s
 
+CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
+CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp
+CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp
+
+CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp > CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.i
+
+CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp -o CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.s
+
 CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
 CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp
 CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp
 
 CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.i: cmake_force
@@ -159,7 +173,7 @@ CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.s: cmake_force
 CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
 CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp
 CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp
 
 CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.i: cmake_force
@@ -173,7 +187,7 @@ CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp
 CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
 CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp
 CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp
 
 CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.s: cmake_
 CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
 CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp
 CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp
 
 CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.i: cmake_force
@@ -198,6 +212,20 @@ CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp -o CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.s
 
+CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o: CMakeFiles/ConstructionDashboard.dir/flags.make
+CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o: /Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp
+CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o: CMakeFiles/ConstructionDashboard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o -MF CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o.d -o CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o -c /Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp
+
+CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp > CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.i
+
+CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp -o CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.s
+
 # Object files for target ConstructionDashboard
 ConstructionDashboard_OBJECTS = \
 "CMakeFiles/ConstructionDashboard.dir/ConstructionDashboard_autogen/mocs_compilation.cpp.o" \
@@ -205,10 +233,12 @@ ConstructionDashboard_OBJECTS = \
 "CMakeFiles/ConstructionDashboard.dir/src/MainWindow.cpp.o" \
 "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvParser.cpp.o" \
 "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.o" \
+"CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o" \
 "CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o" \
 "CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o" \
 "CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o" \
-"CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o"
+"CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o" \
+"CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o"
 
 # External object files for target ConstructionDashboard
 ConstructionDashboard_EXTERNAL_OBJECTS =
@@ -218,19 +248,19 @@ ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/main.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/MainWindow.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/csv/CsvParser.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.o
+ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/analytics/AnalyticsEngine.cpp.o
+ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/build.make
 ConstructionDashboard: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
 ConstructionDashboard: /opt/homebrew/lib/QtSql.framework/Versions/A/QtSql
-ConstructionDashboard: lib/libgtest_main.a
 ConstructionDashboard: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 ConstructionDashboard: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
-ConstructionDashboard: lib/libgtest.a
 ConstructionDashboard: CMakeFiles/ConstructionDashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ConstructionDashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ConstructionDashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ConstructionDashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1159,4 +1159,6 @@ CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o: \
   /opt/homebrew/lib/QtSql.framework/Headers/qtsqlexports.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qmetaobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
-  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Worker.h
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Worker.h \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvImporter.h \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Incident.h

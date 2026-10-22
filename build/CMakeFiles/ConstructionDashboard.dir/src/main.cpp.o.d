@@ -1161,6 +1161,8 @@ CMakeFiles/ConstructionDashboard.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcalendar.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvImporter.h \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Incident.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
@@ -1238,6 +1240,33 @@ CMakeFiles/ConstructionDashboard.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /Users/tayamamenko/Developer/Construction-dashboard/include/construction/utils/Logger.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QFile \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfiledevice.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QMutex \
+  /opt/homebrew/lib/QtCore.framework/Headers/qmutex.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtsan_impl.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/sanitizer/tsan_interface.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
@@ -1245,9 +1274,17 @@ CMakeFiles/ConstructionDashboard.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdirlisting.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h

@@ -1,4 +1,3 @@
-/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ConstructionDashboard.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/Experimental.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/Nightly.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/Continuous.dir
@@ -27,6 +26,7 @@
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ContinuousCoverage.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ContinuousMemCheck.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ContinuousSubmit.dir
+/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ConstructionDashboard.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/ConstructionDashboardTests.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/test.dir
 /Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/edit_cache.dir

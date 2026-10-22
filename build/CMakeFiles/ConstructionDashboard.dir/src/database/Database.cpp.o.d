@@ -1154,4 +1154,5 @@ CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o: \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QUuid \
   /opt/homebrew/lib/QtCore.framework/Headers/quuid.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDebug

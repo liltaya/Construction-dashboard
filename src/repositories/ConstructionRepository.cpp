@@ -60,6 +60,39 @@ void ConstructionRepository::insertProject(
         throwIfFailed(query);
     }
 }
+void ConstructionRepository::importProjects(
+    const std::vector<Project>& projects
+)
+{
+    QSqlDatabase& connection = database_.connection();
+
+    if (!connection.transaction())
+    {
+        throw std::runtime_error(
+            connection.lastError().text().toStdString()
+        );
+    }
+
+    try
+    {
+        for (const auto& project : projects)
+        {
+            insertProject(project);
+        }
+
+        if (!connection.commit())
+        {
+            throw std::runtime_error(
+                connection.lastError().text().toStdString()
+            );
+        }
+    }
+    catch (...)
+    {
+        connection.rollback();
+        throw;
+    }
+}
 
 std::optional<Project>
 ConstructionRepository::findProjectById(

@@ -4,7 +4,11 @@ ConstructionDashboard_autogen/timestamp: \
 	/Users/tayamamenko/Developer/Construction-dashboard/build/CMakeFiles/4.4.3/CMakeSystem.cmake \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/MainWindow.h \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/analytics/AnalyticsEngine.h \
+	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvImporter.h \
+	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvParser.h \
+	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvValidator.h \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/database/Database.h \
+	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/logging/Logger.h \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/CostEntry.h \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Incident.h \
 	/Users/tayamamenko/Developer/Construction-dashboard/include/construction/models/Project.h \
@@ -17,10 +21,12 @@ ConstructionDashboard_autogen/timestamp: \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvImporter.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvParser.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/main.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake \

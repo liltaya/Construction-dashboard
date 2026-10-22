@@ -2,6 +2,7 @@
 
 #include "construction/analytics/AnalyticsEngine.h"
 #include "construction/repositories/ConstructionRepository.h"
+#include "construction/csv/CsvImporter.h"
 
 #include <cstdint>
 #include <optional>
@@ -27,6 +28,8 @@ public:
     void addCostEntry(const CostEntry& entry);
     void addWorkLog(const WorkLog& workLog);
 
+    void importProjectsFromCsv(const QString& filePath);
+
     std::optional<Project>
     getProject(std::int64_t projectId);
 
@@ -35,7 +38,8 @@ public:
     ProjectAnalytics getProjectAnalytics(
         std::int64_t projectId,
         const QDate& currentDate =
-            QDate::currentDate()
+        QDate::currentDate()
+            
     );
 
 private:

@@ -33,6 +33,11 @@
 		"/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake",
 		"/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake",
 		"/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTest.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTestUseLaunchers.cmake",
+		"/opt/homebrew/share/cmake/Modules/CTestTargets.cmake",
+		"/opt/homebrew/share/cmake/Modules/DartConfiguration.tcl.in",
+		"/opt/homebrew/share/cmake/Templates/CTestScript.cmake.in",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake",
@@ -416,11 +421,6 @@
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake",
 		"/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTest.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTestUseLaunchers.cmake",
-		"/opt/homebrew/share/cmake/Modules/CTestTargets.cmake",
-		"/opt/homebrew/share/cmake/Modules/DartConfiguration.tcl.in",
-		"/opt/homebrew/share/cmake/Templates/CTestScript.cmake.in",
 		"/opt/homebrew/share/cmake/Modules/FetchContent.cmake",
 		"/opt/homebrew/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake",
 		"/opt/homebrew/share/cmake/Modules/FetchContent/CMakeLists.cmake.in",
@@ -445,9 +445,33 @@
 			null
 		],
 		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvImporter.h",
+			"MU",
+			"LOGU4EKXOG/moc_CsvImporter.cpp",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvParser.h",
+			"MU",
+			"LOGU4EKXOG/moc_CsvParser.cpp",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/include/construction/csv/CsvValidator.h",
+			"MU",
+			"LOGU4EKXOG/moc_CsvValidator.cpp",
+			null
+		],
+		[
 			"/Users/tayamamenko/Developer/Construction-dashboard/include/construction/database/Database.h",
 			"MU",
 			"6N5PPESZWQ/moc_Database.cpp",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/include/construction/logging/Logger.h",
+			"MU",
+			"FXNFBDBAE5/moc_Logger.cpp",
 			null
 		],
 		[
@@ -530,8 +554,6 @@
 		"/opt/homebrew/lib/QtGui.framework",
 		"/opt/homebrew/lib/QtSql.framework/Headers",
 		"/opt/homebrew/lib/QtSql.framework",
-		"/Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/include",
-		"/Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest",
 		"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
 		"/Library/Developer/CommandLineTools/usr/lib/clang/17/include",
 		"/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
@@ -591,6 +613,11 @@
 			null
 		],
 		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp",
 			"MU",
 			null
@@ -607,6 +634,11 @@
 		],
 		[
 			"/Users/tayamamenko/Developer/Construction-dashboard/src/services/DashboardService.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp",
 			"MU",
 			null
 		]

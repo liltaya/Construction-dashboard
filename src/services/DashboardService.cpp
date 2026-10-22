@@ -10,6 +10,22 @@ DashboardService::DashboardService(
     : repository_(repository)
 {
 }
+void DashboardService::importProjectsFromCsv(
+    const QString& filePath
+)
+{
+    const auto result =
+        CsvImporter::importProjects(filePath);
+
+    if (!result.errors.empty())
+    {
+        throw std::runtime_error(
+            result.errors.front().toStdString()
+        );
+    }
+
+    repository_.importProjects(result.objects);
+}
 
 void DashboardService::createProject(
     const Project& project

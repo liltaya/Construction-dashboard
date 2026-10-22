@@ -1,0 +1,91 @@
+Start testing: Oct 22 13:34 PDT
+----------------------------------------------------------
+1/1 Testing: ConstructionDashboardAllTests
+1/1 Test: ConstructionDashboardAllTests
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build-sanitized/ConstructionDashboardTests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build-sanitized
+"ConstructionDashboardAllTests" start time: Oct 22 13:34 PDT
+Output:
+----------------------------------------------------------
+[==========] Running 25 tests from 6 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from ProjectSetupTest
+[ RUN      ] ProjectSetupTest.GoogleTestWorks
+[       OK ] ProjectSetupTest.GoogleTestWorks (0 ms)
+[----------] 1 test from ProjectSetupTest (0 ms total)
+
+[----------] 5 tests from CsvImporterTest
+[ RUN      ] CsvImporterTest.ImportsValidProject
+[       OK ] CsvImporterTest.ImportsValidProject (3 ms)
+[ RUN      ] CsvImporterTest.RejectsInvalidProjectStatus
+[       OK ] CsvImporterTest.RejectsInvalidProjectStatus (0 ms)
+[ RUN      ] CsvImporterTest.RejectsNegativeProjectBudget
+[       OK ] CsvImporterTest.RejectsNegativeProjectBudget (0 ms)
+[ RUN      ] CsvImporterTest.AllowsCostWithoutTask
+[       OK ] CsvImporterTest.AllowsCostWithoutTask (0 ms)
+[ RUN      ] CsvImporterTest.RejectsWrongHeader
+[       OK ] CsvImporterTest.RejectsWrongHeader (0 ms)
+[----------] 5 tests from CsvImporterTest (5 ms total)
+
+[----------] 1 test from CsvParserTest
+[ RUN      ] CsvParserTest.HandlesQuotedComma
+[       OK ] CsvParserTest.HandlesQuotedComma (0 ms)
+[----------] 1 test from CsvParserTest (0 ms total)
+
+[----------] 7 tests from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.AcceptsValidCsv
+[       OK ] CsvValidatorTest.AcceptsValidCsv (0 ms)
+[ RUN      ] CsvValidatorTest.RejectsEmptyFile
+[       OK ] CsvValidatorTest.RejectsEmptyFile (0 ms)
+[ RUN      ] CsvValidatorTest.RejectsMissingColumn
+[       OK ] CsvValidatorTest.RejectsMissingColumn (0 ms)
+[ RUN      ] CsvValidatorTest.HandlesQuotedComma
+[       OK ] CsvValidatorTest.HandlesQuotedComma (0 ms)
+[ RUN      ] CsvValidatorTest.RejectsUnclosedQuote
+[       OK ] CsvValidatorTest.RejectsUnclosedQuote (0 ms)
+[ RUN      ] CsvValidatorTest.HandlesEscapedQuotes
+[       OK ] CsvValidatorTest.HandlesEscapedQuotes (0 ms)
+[ RUN      ] CsvValidatorTest.RejectsEmptyHeader
+[       OK ] CsvValidatorTest.RejectsEmptyHeader (0 ms)
+[----------] 7 tests from CsvValidatorTest (0 ms total)
+
+[----------] 5 tests from AnalyticsTest
+[ RUN      ] AnalyticsTest.BudgetVariance
+[       OK ] AnalyticsTest.BudgetVariance (0 ms)
+[ RUN      ] AnalyticsTest.CompletionPercentage
+[       OK ] AnalyticsTest.CompletionPercentage (0 ms)
+[ RUN      ] AnalyticsTest.OverdueTasks
+[       OK ] AnalyticsTest.OverdueTasks (0 ms)
+[ RUN      ] AnalyticsTest.LaborHours
+[       OK ] AnalyticsTest.LaborHours (0 ms)
+[ RUN      ] AnalyticsTest.EmptyData
+[       OK ] AnalyticsTest.EmptyData (0 ms)
+[----------] 5 tests from AnalyticsTest (0 ms total)
+
+[----------] 6 tests from DatabaseTest
+[ RUN      ] DatabaseTest.CreatesTables
+[       OK ] DatabaseTest.CreatesTables (16 ms)
+[ RUN      ] DatabaseTest.InsertAndRead
+[       OK ] DatabaseTest.InsertAndRead (3 ms)
+[ RUN      ] DatabaseTest.UpdateProject
+[       OK ] DatabaseTest.UpdateProject (4 ms)
+[ RUN      ] DatabaseTest.DuplicateIdThrows
+[       OK ] DatabaseTest.DuplicateIdThrows (3 ms)
+[ RUN      ] DatabaseTest.NegativeBudgetRejected
+[       OK ] DatabaseTest.NegativeBudgetRejected (2 ms)
+[ RUN      ] DatabaseTest.CountsSafetyIncidents
+[       OK ] DatabaseTest.CountsSafetyIncidents (2 ms)
+[----------] 6 tests from DatabaseTest (32 ms total)
+
+[----------] Global test environment tear-down
+[==========] 25 tests from 6 test suites ran. (39 ms total)
+[  PASSED  ] 25 tests.
+<end of output>
+Test time =   1.02 sec
+----------------------------------------------------------
+Test Passed.
+"ConstructionDashboardAllTests" end time: Oct 22 13:34 PDT
+"ConstructionDashboardAllTests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Oct 22 13:34 PDT

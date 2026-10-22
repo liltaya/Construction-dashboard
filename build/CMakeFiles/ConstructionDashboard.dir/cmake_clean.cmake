@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvImporter.cpp.o.d"
   "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvParser.cpp.o"
   "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvParser.cpp.o.d"
+  "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o"
+  "CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o.d"
   "CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o"
   "CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o.d"
   "CMakeFiles/ConstructionDashboard.dir/src/main.cpp.o"
@@ -20,6 +22,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o.d"
   "CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o"
   "CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.o.d"
+  "CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o"
+  "CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o.d"
   "ConstructionDashboard"
   "ConstructionDashboard.pdb"
 )

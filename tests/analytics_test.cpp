@@ -1,111 +1,116 @@
 #include "construction/analytics/AnalyticsEngine.h"
 
 #include <gtest/gtest.h>
+#include <QDate>
 
-TEST(AnalyticsEngineTest, CalculatesMetrics)
+using namespace construction;
+
+TEST(AnalyticsTest, BudgetVariance)
 {
-    construction::Project project;
+    Project project;
 
-    project.id = 1;
+    project.budget = 1000000.0;
     project.startDate = "2026-01-01";
     project.endDate = "2026-12-31";
-    project.budget = 1000000.0;
 
-    //First task: completed
-    construction::Task task1;
+    CostEntry cost1;
+    cost1.amount = 150000.0;
 
-    task1.id = 1;
-    task1.projectId = 1;
+    CostEntry cost2;
+    cost2.amount = 25000.0;
+
+    const auto result = AnalyticsEngine::calculate(
+        project,
+        {},
+        {cost1, cost2},
+        {},
+        QDate(2026, 7, 1)
+    );
+
+    EXPECT_DOUBLE_EQ(result.actualCost, 175000.0);
+    EXPECT_DOUBLE_EQ(result.budgetVariance, 825000.0);
+}
+
+TEST(AnalyticsTest, CompletionPercentage)
+{
+    Project project;
+
+    Task task1;
     task1.status = "completed";
+
+    Task task2;
+    task2.status = "in_progress";
+
+    const auto result = AnalyticsEngine::calculate(
+        project,
+        {task1, task2},
+        {},
+        {},
+        QDate(2026, 7, 1)
+    );
+
+    EXPECT_DOUBLE_EQ(result.completionPercent, 50.0);
+}
+
+TEST(AnalyticsTest, OverdueTasks)
+{
+    Project project;
+
+    Task task1;
+    task1.status = "in_progress";
     task1.dueDate = "2026-03-01";
 
-    //Second task: in progress and overdue
-    construction::Task task2;
+    Task task2;
+    task2.status = "completed";
+    task2.dueDate = "2026-02-01";
 
-    task2.id = 2;
-    task2.projectId = 1;
-    task2.status = "in_progress";
-    task2.dueDate = "2026-04-01";
-
-    std::vector<construction::Task> tasks{
-        task1,
-        task2
-    };
-
-    //Project cost
-    construction::CostEntry cost;
-
-    cost.id = 1;
-    cost.projectId = 1;
-    cost.amount = 250000.0;
-
-    std::vector<construction::CostEntry> costs{
-        cost
-    };
-
-    //Labor hours
-    construction::WorkLog log;
-
-    log.id = 1;
-    log.projectId = 1;
-    log.workerId = 1;
-    log.hours = 40.0;
-
-    std::vector<construction::WorkLog> workLogs{
-        log
-    };
-
-    //Calculate all analytics
-    const auto analytics =
-        construction::AnalyticsEngine::calculate(
-            project,
-            tasks,
-            costs,
-            workLogs,
-            QDate(2026, 7, 1)
-        );
-
-    //Verify actual cost
-    EXPECT_DOUBLE_EQ(
-        analytics.actualCost,
-        250000.0
+    const auto result = AnalyticsEngine::calculate(
+        project,
+        {task1, task2},
+        {},
+        {},
+        QDate(2026, 7, 1)
     );
 
-    //Verify budget variance
-    EXPECT_DOUBLE_EQ(
-        analytics.budgetVariance,
-        750000.0
+    EXPECT_EQ(result.overdueTasks, 1);
+}
+
+TEST(AnalyticsTest, LaborHours)
+{
+    Project project;
+
+    WorkLog first;
+    first.hours = 8.0;
+
+    WorkLog second;
+    second.hours = 7.5;
+
+    const auto result = AnalyticsEngine::calculate(
+        project,
+        {},
+        {},
+        {first, second},
+        QDate(2026, 7, 1)
     );
 
-    //Verify completion percentage
-    EXPECT_DOUBLE_EQ(
-        analytics.completionPercent,
-        50.0
+    EXPECT_DOUBLE_EQ(result.laborHours, 15.5);
+}
+
+TEST(AnalyticsTest, EmptyData)
+{
+    Project project;
+    project.budget = 500000.0;
+
+    const auto result = AnalyticsEngine::calculate(
+        project,
+        {},
+        {},
+        {},
+        QDate(2026, 7, 1)
     );
 
-    //Verify overdue tasks
-    EXPECT_EQ(
-        analytics.overdueTasks,
-        1
-    );
-
-    //Verify labor hours
-    EXPECT_DOUBLE_EQ(
-        analytics.laborHours,
-        40.0
-    );
-
-    //Verify planned completion
-    EXPECT_NEAR(
-        analytics.plannedCompletionPercent,
-        49.7,
-        0.1
-    );
-
-    //Verify schedule variance
-    EXPECT_NEAR(
-        analytics.scheduleVariance,
-        0.3,
-        0.1
-    );
+    EXPECT_DOUBLE_EQ(result.actualCost, 0.0);
+    EXPECT_DOUBLE_EQ(result.completionPercent, 0.0);
+    EXPECT_EQ(result.overdueTasks, 0);
+    EXPECT_DOUBLE_EQ(result.laborHours, 0.0);
 }

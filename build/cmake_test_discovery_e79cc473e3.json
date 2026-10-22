@@ -1,5 +1,5 @@
 {
-  "tests": 8,
+  "tests": 25,
   "name": "AllTests",
   "testsuites": [
     {
@@ -56,13 +56,110 @@
       ]
     },
     {
-      "name": "AnalyticsEngineTest",
-      "tests": 1,
+      "name": "CsvValidatorTest",
+      "tests": 7,
       "testsuite": [
         {
-          "name": "CalculatesMetrics",
+          "name": "AcceptsValidCsv",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 7
+        },
+        {
+          "name": "RejectsEmptyFile",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 20
+        },
+        {
+          "name": "RejectsMissingColumn",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 28
+        },
+        {
+          "name": "HandlesQuotedComma",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 38
+        },
+        {
+          "name": "RejectsUnclosedQuote",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 54
+        },
+        {
+          "name": "HandlesEscapedQuotes",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 64
+        },
+        {
+          "name": "RejectsEmptyHeader",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/csv_validation_test.cpp",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "name": "AnalyticsTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "BudgetVariance",
           "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/analytics_test.cpp",
-          "line": 5
+          "line": 8
+        },
+        {
+          "name": "CompletionPercentage",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/analytics_test.cpp",
+          "line": 34
+        },
+        {
+          "name": "OverdueTasks",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/analytics_test.cpp",
+          "line": 55
+        },
+        {
+          "name": "LaborHours",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/analytics_test.cpp",
+          "line": 78
+        },
+        {
+          "name": "EmptyData",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/analytics_test.cpp",
+          "line": 99
+        }
+      ]
+    },
+    {
+      "name": "DatabaseTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "CreatesTables",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 34
+        },
+        {
+          "name": "InsertAndRead",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 52
+        },
+        {
+          "name": "UpdateProject",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 70
+        },
+        {
+          "name": "DuplicateIdThrows",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 93
+        },
+        {
+          "name": "NegativeBudgetRejected",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 111
+        },
+        {
+          "name": "CountsSafetyIncidents",
+          "file": "\/Users\/tayamamenko\/Developer\/Construction-dashboard\/tests\/database_test.cpp",
+          "line": 128
         }
       ]
     }

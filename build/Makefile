@@ -172,19 +172,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ConstructionDashboard
-
-# Build rule for target.
-ConstructionDashboard: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ConstructionDashboard
-.PHONY : ConstructionDashboard
-
-# fast build rule for target.
-ConstructionDashboard/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/build
-.PHONY : ConstructionDashboard/fast
-
-#=============================================================================
 # Target rules for targets named Experimental
 
 # Build rule for target.
@@ -547,6 +534,19 @@ ContinuousSubmit: cmake_check_build_system
 ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ConstructionDashboard
+
+# Build rule for target.
+ConstructionDashboard: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ConstructionDashboard
+.PHONY : ConstructionDashboard
+
+# fast build rule for target.
+ConstructionDashboard/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/build
+.PHONY : ConstructionDashboard/fast
 
 #=============================================================================
 # Target rules for targets named ConstructionDashboardTests
@@ -922,12 +922,40 @@ src/csv/CsvParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/csv/CsvParser.cpp.s
 .PHONY : src/csv/CsvParser.cpp.s
 
+src/csv/CsvValidator.o: src/csv/CsvValidator.cpp.o
+.PHONY : src/csv/CsvValidator.o
+
+# target to build an object file
+src/csv/CsvValidator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/csv/CsvValidator.cpp.o
+.PHONY : src/csv/CsvValidator.cpp.o
+
+src/csv/CsvValidator.i: src/csv/CsvValidator.cpp.i
+.PHONY : src/csv/CsvValidator.i
+
+# target to preprocess a source file
+src/csv/CsvValidator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/csv/CsvValidator.cpp.i
+.PHONY : src/csv/CsvValidator.cpp.i
+
+src/csv/CsvValidator.s: src/csv/CsvValidator.cpp.s
+.PHONY : src/csv/CsvValidator.s
+
+# target to generate assembly for a file
+src/csv/CsvValidator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/csv/CsvValidator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/csv/CsvValidator.cpp.s
+.PHONY : src/csv/CsvValidator.cpp.s
+
 src/database/Database.o: src/database/Database.cpp.o
 .PHONY : src/database/Database.o
 
 # target to build an object file
 src/database/Database.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/database/Database.cpp.o
 .PHONY : src/database/Database.cpp.o
 
 src/database/Database.i: src/database/Database.cpp.i
@@ -936,6 +964,7 @@ src/database/Database.i: src/database/Database.cpp.i
 # target to preprocess a source file
 src/database/Database.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/database/Database.cpp.i
 .PHONY : src/database/Database.cpp.i
 
 src/database/Database.s: src/database/Database.cpp.s
@@ -944,6 +973,7 @@ src/database/Database.s: src/database/Database.cpp.s
 # target to generate assembly for a file
 src/database/Database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/database/Database.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/database/Database.cpp.s
 .PHONY : src/database/Database.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -976,6 +1006,7 @@ src/repositories/ConstructionRepository.o: src/repositories/ConstructionReposito
 # target to build an object file
 src/repositories/ConstructionRepository.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/repositories/ConstructionRepository.cpp.o
 .PHONY : src/repositories/ConstructionRepository.cpp.o
 
 src/repositories/ConstructionRepository.i: src/repositories/ConstructionRepository.cpp.i
@@ -984,6 +1015,7 @@ src/repositories/ConstructionRepository.i: src/repositories/ConstructionReposito
 # target to preprocess a source file
 src/repositories/ConstructionRepository.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/repositories/ConstructionRepository.cpp.i
 .PHONY : src/repositories/ConstructionRepository.cpp.i
 
 src/repositories/ConstructionRepository.s: src/repositories/ConstructionRepository.cpp.s
@@ -992,6 +1024,7 @@ src/repositories/ConstructionRepository.s: src/repositories/ConstructionReposito
 # target to generate assembly for a file
 src/repositories/ConstructionRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/repositories/ConstructionRepository.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/repositories/ConstructionRepository.cpp.s
 .PHONY : src/repositories/ConstructionRepository.cpp.s
 
 src/services/DashboardService.o: src/services/DashboardService.cpp.o
@@ -1017,6 +1050,33 @@ src/services/DashboardService.s: src/services/DashboardService.cpp.s
 src/services/DashboardService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/services/DashboardService.cpp.s
 .PHONY : src/services/DashboardService.cpp.s
+
+src/utils/Logger.o: src/utils/Logger.cpp.o
+.PHONY : src/utils/Logger.o
+
+# target to build an object file
+src/utils/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/utils/Logger.cpp.o
+.PHONY : src/utils/Logger.cpp.o
+
+src/utils/Logger.i: src/utils/Logger.cpp.i
+.PHONY : src/utils/Logger.i
+
+# target to preprocess a source file
+src/utils/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/utils/Logger.cpp.i
+.PHONY : src/utils/Logger.cpp.i
+
+src/utils/Logger.s: src/utils/Logger.cpp.s
+.PHONY : src/utils/Logger.s
+
+# target to generate assembly for a file
+src/utils/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboard.dir/build.make CMakeFiles/ConstructionDashboard.dir/src/utils/Logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/src/utils/Logger.cpp.s
+.PHONY : src/utils/Logger.cpp.s
 
 tests/analytics_test.o: tests/analytics_test.cpp.o
 .PHONY : tests/analytics_test.o
@@ -1066,6 +1126,54 @@ tests/csv_import_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/csv_import_test.cpp.s
 .PHONY : tests/csv_import_test.cpp.s
 
+tests/csv_validation_test.o: tests/csv_validation_test.cpp.o
+.PHONY : tests/csv_validation_test.o
+
+# target to build an object file
+tests/csv_validation_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/csv_validation_test.cpp.o
+.PHONY : tests/csv_validation_test.cpp.o
+
+tests/csv_validation_test.i: tests/csv_validation_test.cpp.i
+.PHONY : tests/csv_validation_test.i
+
+# target to preprocess a source file
+tests/csv_validation_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/csv_validation_test.cpp.i
+.PHONY : tests/csv_validation_test.cpp.i
+
+tests/csv_validation_test.s: tests/csv_validation_test.cpp.s
+.PHONY : tests/csv_validation_test.s
+
+# target to generate assembly for a file
+tests/csv_validation_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/csv_validation_test.cpp.s
+.PHONY : tests/csv_validation_test.cpp.s
+
+tests/database_test.o: tests/database_test.cpp.o
+.PHONY : tests/database_test.o
+
+# target to build an object file
+tests/database_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/database_test.cpp.o
+.PHONY : tests/database_test.cpp.o
+
+tests/database_test.i: tests/database_test.cpp.i
+.PHONY : tests/database_test.i
+
+# target to preprocess a source file
+tests/database_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/database_test.cpp.i
+.PHONY : tests/database_test.cpp.i
+
+tests/database_test.s: tests/database_test.cpp.s
+.PHONY : tests/database_test.s
+
+# target to generate assembly for a file
+tests/database_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/database_test.cpp.s
+.PHONY : tests/database_test.cpp.s
+
 tests/smoke_test.o: tests/smoke_test.cpp.o
 .PHONY : tests/smoke_test.o
 
@@ -1089,6 +1197,30 @@ tests/smoke_test.s: tests/smoke_test.cpp.s
 tests/smoke_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/smoke_test.cpp.s
 .PHONY : tests/smoke_test.cpp.s
+
+tests/test_main.o: tests/test_main.cpp.o
+.PHONY : tests/test_main.o
+
+# target to build an object file
+tests/test_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/test_main.cpp.o
+.PHONY : tests/test_main.cpp.o
+
+tests/test_main.i: tests/test_main.cpp.i
+.PHONY : tests/test_main.i
+
+# target to preprocess a source file
+tests/test_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/test_main.cpp.i
+.PHONY : tests/test_main.cpp.i
+
+tests/test_main.s: tests/test_main.cpp.s
+.PHONY : tests/test_main.s
+
+# target to generate assembly for a file
+tests/test_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ConstructionDashboardTests.dir/build.make CMakeFiles/ConstructionDashboardTests.dir/tests/test_main.cpp.s
+.PHONY : tests/test_main.cpp.s
 
 # Help Target
 help:
@@ -1167,6 +1299,9 @@ help:
 	@echo "... src/csv/CsvParser.o"
 	@echo "... src/csv/CsvParser.i"
 	@echo "... src/csv/CsvParser.s"
+	@echo "... src/csv/CsvValidator.o"
+	@echo "... src/csv/CsvValidator.i"
+	@echo "... src/csv/CsvValidator.s"
 	@echo "... src/database/Database.o"
 	@echo "... src/database/Database.i"
 	@echo "... src/database/Database.s"
@@ -1179,15 +1314,27 @@ help:
 	@echo "... src/services/DashboardService.o"
 	@echo "... src/services/DashboardService.i"
 	@echo "... src/services/DashboardService.s"
+	@echo "... src/utils/Logger.o"
+	@echo "... src/utils/Logger.i"
+	@echo "... src/utils/Logger.s"
 	@echo "... tests/analytics_test.o"
 	@echo "... tests/analytics_test.i"
 	@echo "... tests/analytics_test.s"
 	@echo "... tests/csv_import_test.o"
 	@echo "... tests/csv_import_test.i"
 	@echo "... tests/csv_import_test.s"
+	@echo "... tests/csv_validation_test.o"
+	@echo "... tests/csv_validation_test.i"
+	@echo "... tests/csv_validation_test.s"
+	@echo "... tests/database_test.o"
+	@echo "... tests/database_test.i"
+	@echo "... tests/database_test.s"
 	@echo "... tests/smoke_test.o"
 	@echo "... tests/smoke_test.i"
 	@echo "... tests/smoke_test.s"
+	@echo "... tests/test_main.o"
+	@echo "... tests/test_main.i"
+	@echo "... tests/test_main.s"
 .PHONY : help
 
 

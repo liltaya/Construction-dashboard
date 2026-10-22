@@ -5,9 +5,16 @@ ConstructionDashboardTests_autogen/timestamp: \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/analytics/AnalyticsEngine.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvImporter.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvParser.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/csv/CsvValidator.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/database/Database.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/repositories/ConstructionRepository.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/src/utils/Logger.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/tests/analytics_test.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/tests/csv_import_test.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/tests/csv_validation_test.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/tests/database_test.cpp \
 	/Users/tayamamenko/Developer/Construction-dashboard/tests/smoke_test.cpp \
+	/Users/tayamamenko/Developer/Construction-dashboard/tests/test_main.cpp \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake \
 	/opt/homebrew/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake \

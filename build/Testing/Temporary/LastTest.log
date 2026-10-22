@@ -1,13 +1,12 @@
-Start testing: Oct 20 18:02 PDT
+Start testing: Oct 21 20:57 PDT
 ----------------------------------------------------------
-1/8 Testing: ProjectSetupTest.GoogleTestWorks
-1/8 Test: ProjectSetupTest.GoogleTestWorks
+1/25 Testing: ProjectSetupTest.GoogleTestWorks
+1/25 Test: ProjectSetupTest.GoogleTestWorks
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=ProjectSetupTest.GoogleTestWorks" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"ProjectSetupTest.GoogleTestWorks" start time: Oct 20 18:02 PDT
+"ProjectSetupTest.GoogleTestWorks" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = ProjectSetupTest.GoogleTestWorks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -20,75 +19,72 @@ Note: Google Test filter = ProjectSetupTest.GoogleTestWorks
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.10 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"ProjectSetupTest.GoogleTestWorks" end time: Oct 20 18:02 PDT
+"ProjectSetupTest.GoogleTestWorks" end time: Oct 21 20:57 PDT
 "ProjectSetupTest.GoogleTestWorks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/8 Testing: CsvImporterTest.ImportsValidProject
-2/8 Test: CsvImporterTest.ImportsValidProject
+2/25 Testing: CsvImporterTest.ImportsValidProject
+2/25 Test: CsvImporterTest.ImportsValidProject
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvImporterTest.ImportsValidProject" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvImporterTest.ImportsValidProject" start time: Oct 20 18:02 PDT
+"CsvImporterTest.ImportsValidProject" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvImporterTest.ImportsValidProject
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from CsvImporterTest
 [ RUN      ] CsvImporterTest.ImportsValidProject
-[       OK ] CsvImporterTest.ImportsValidProject (7 ms)
-[----------] 1 test from CsvImporterTest (7 ms total)
+[       OK ] CsvImporterTest.ImportsValidProject (2 ms)
+[----------] 1 test from CsvImporterTest (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (7 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvImporterTest.ImportsValidProject" end time: Oct 20 18:02 PDT
+"CsvImporterTest.ImportsValidProject" end time: Oct 21 20:57 PDT
 "CsvImporterTest.ImportsValidProject" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/8 Testing: CsvImporterTest.RejectsInvalidProjectStatus
-3/8 Test: CsvImporterTest.RejectsInvalidProjectStatus
+3/25 Testing: CsvImporterTest.RejectsInvalidProjectStatus
+3/25 Test: CsvImporterTest.RejectsInvalidProjectStatus
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvImporterTest.RejectsInvalidProjectStatus" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvImporterTest.RejectsInvalidProjectStatus" start time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsInvalidProjectStatus" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvImporterTest.RejectsInvalidProjectStatus
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from CsvImporterTest
 [ RUN      ] CsvImporterTest.RejectsInvalidProjectStatus
-[       OK ] CsvImporterTest.RejectsInvalidProjectStatus (1 ms)
-[----------] 1 test from CsvImporterTest (1 ms total)
+[       OK ] CsvImporterTest.RejectsInvalidProjectStatus (0 ms)
+[----------] 1 test from CsvImporterTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvImporterTest.RejectsInvalidProjectStatus" end time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsInvalidProjectStatus" end time: Oct 21 20:57 PDT
 "CsvImporterTest.RejectsInvalidProjectStatus" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/8 Testing: CsvImporterTest.RejectsNegativeProjectBudget
-4/8 Test: CsvImporterTest.RejectsNegativeProjectBudget
+4/25 Testing: CsvImporterTest.RejectsNegativeProjectBudget
+4/25 Test: CsvImporterTest.RejectsNegativeProjectBudget
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvImporterTest.RejectsNegativeProjectBudget" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvImporterTest.RejectsNegativeProjectBudget" start time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsNegativeProjectBudget" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvImporterTest.RejectsNegativeProjectBudget
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -104,18 +100,17 @@ Note: Google Test filter = CsvImporterTest.RejectsNegativeProjectBudget
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvImporterTest.RejectsNegativeProjectBudget" end time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsNegativeProjectBudget" end time: Oct 21 20:57 PDT
 "CsvImporterTest.RejectsNegativeProjectBudget" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/8 Testing: CsvImporterTest.AllowsCostWithoutTask
-5/8 Test: CsvImporterTest.AllowsCostWithoutTask
+5/25 Testing: CsvImporterTest.AllowsCostWithoutTask
+5/25 Test: CsvImporterTest.AllowsCostWithoutTask
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvImporterTest.AllowsCostWithoutTask" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvImporterTest.AllowsCostWithoutTask" start time: Oct 20 18:02 PDT
+"CsvImporterTest.AllowsCostWithoutTask" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvImporterTest.AllowsCostWithoutTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -131,18 +126,17 @@ Note: Google Test filter = CsvImporterTest.AllowsCostWithoutTask
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvImporterTest.AllowsCostWithoutTask" end time: Oct 20 18:02 PDT
+"CsvImporterTest.AllowsCostWithoutTask" end time: Oct 21 20:57 PDT
 "CsvImporterTest.AllowsCostWithoutTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/8 Testing: CsvImporterTest.RejectsWrongHeader
-6/8 Test: CsvImporterTest.RejectsWrongHeader
+6/25 Testing: CsvImporterTest.RejectsWrongHeader
+6/25 Test: CsvImporterTest.RejectsWrongHeader
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvImporterTest.RejectsWrongHeader" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvImporterTest.RejectsWrongHeader" start time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsWrongHeader" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvImporterTest.RejectsWrongHeader
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -158,18 +152,17 @@ Note: Google Test filter = CsvImporterTest.RejectsWrongHeader
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvImporterTest.RejectsWrongHeader" end time: Oct 20 18:02 PDT
+"CsvImporterTest.RejectsWrongHeader" end time: Oct 21 20:57 PDT
 "CsvImporterTest.RejectsWrongHeader" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/8 Testing: CsvParserTest.HandlesQuotedComma
-7/8 Test: CsvParserTest.HandlesQuotedComma
+7/25 Testing: CsvParserTest.HandlesQuotedComma
+7/25 Test: CsvParserTest.HandlesQuotedComma
 Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvParserTest.HandlesQuotedComma" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"CsvParserTest.HandlesQuotedComma" start time: Oct 20 18:02 PDT
+"CsvParserTest.HandlesQuotedComma" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CsvParserTest.HandlesQuotedComma
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -182,28 +175,27 @@ Note: Google Test filter = CsvParserTest.HandlesQuotedComma
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"CsvParserTest.HandlesQuotedComma" end time: Oct 20 18:02 PDT
+"CsvParserTest.HandlesQuotedComma" end time: Oct 21 20:57 PDT
 "CsvParserTest.HandlesQuotedComma" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/8 Testing: AnalyticsEngineTest.CalculatesMetrics
-8/8 Test: AnalyticsEngineTest.CalculatesMetrics
-Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsEngineTest.CalculatesMetrics" "--gtest_also_run_disabled_tests"
+8/25 Testing: CsvValidatorTest.AcceptsValidCsv
+8/25 Test: CsvValidatorTest.AcceptsValidCsv
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.AcceptsValidCsv" "--gtest_also_run_disabled_tests"
 Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
-"AnalyticsEngineTest.CalculatesMetrics" start time: Oct 20 18:02 PDT
+"CsvValidatorTest.AcceptsValidCsv" start time: Oct 21 20:57 PDT
 Output:
 ----------------------------------------------------------
-Running main() from /Users/tayamamenko/Developer/Construction-dashboard/build/_deps/googletest-src/googletest/src/gtest_main.cc
-Note: Google Test filter = AnalyticsEngineTest.CalculatesMetrics
+Note: Google Test filter = CsvValidatorTest.AcceptsValidCsv
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 1 test from AnalyticsEngineTest
-[ RUN      ] AnalyticsEngineTest.CalculatesMetrics
-[       OK ] AnalyticsEngineTest.CalculatesMetrics (0 ms)
-[----------] 1 test from AnalyticsEngineTest (0 ms total)
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.AcceptsValidCsv
+[       OK ] CsvValidatorTest.AcceptsValidCsv (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
@@ -212,8 +204,450 @@ Note: Google Test filter = AnalyticsEngineTest.CalculatesMetrics
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"AnalyticsEngineTest.CalculatesMetrics" end time: Oct 20 18:02 PDT
-"AnalyticsEngineTest.CalculatesMetrics" time elapsed: 00:00:00
+"CsvValidatorTest.AcceptsValidCsv" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.AcceptsValidCsv" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 20 18:02 PDT
+9/25 Testing: CsvValidatorTest.RejectsEmptyFile
+9/25 Test: CsvValidatorTest.RejectsEmptyFile
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.RejectsEmptyFile" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.RejectsEmptyFile" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.RejectsEmptyFile
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.RejectsEmptyFile
+[       OK ] CsvValidatorTest.RejectsEmptyFile (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.RejectsEmptyFile" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.RejectsEmptyFile" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/25 Testing: CsvValidatorTest.RejectsMissingColumn
+10/25 Test: CsvValidatorTest.RejectsMissingColumn
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.RejectsMissingColumn" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.RejectsMissingColumn" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.RejectsMissingColumn
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.RejectsMissingColumn
+[       OK ] CsvValidatorTest.RejectsMissingColumn (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.RejectsMissingColumn" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.RejectsMissingColumn" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/25 Testing: CsvValidatorTest.HandlesQuotedComma
+11/25 Test: CsvValidatorTest.HandlesQuotedComma
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.HandlesQuotedComma" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.HandlesQuotedComma" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.HandlesQuotedComma
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.HandlesQuotedComma
+[       OK ] CsvValidatorTest.HandlesQuotedComma (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.HandlesQuotedComma" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.HandlesQuotedComma" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/25 Testing: CsvValidatorTest.RejectsUnclosedQuote
+12/25 Test: CsvValidatorTest.RejectsUnclosedQuote
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.RejectsUnclosedQuote" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.RejectsUnclosedQuote" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.RejectsUnclosedQuote
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.RejectsUnclosedQuote
+[       OK ] CsvValidatorTest.RejectsUnclosedQuote (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.RejectsUnclosedQuote" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.RejectsUnclosedQuote" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/25 Testing: CsvValidatorTest.HandlesEscapedQuotes
+13/25 Test: CsvValidatorTest.HandlesEscapedQuotes
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.HandlesEscapedQuotes" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.HandlesEscapedQuotes" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.HandlesEscapedQuotes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.HandlesEscapedQuotes
+[       OK ] CsvValidatorTest.HandlesEscapedQuotes (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.HandlesEscapedQuotes" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.HandlesEscapedQuotes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/25 Testing: CsvValidatorTest.RejectsEmptyHeader
+14/25 Test: CsvValidatorTest.RejectsEmptyHeader
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=CsvValidatorTest.RejectsEmptyHeader" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"CsvValidatorTest.RejectsEmptyHeader" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CsvValidatorTest.RejectsEmptyHeader
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CsvValidatorTest
+[ RUN      ] CsvValidatorTest.RejectsEmptyHeader
+[       OK ] CsvValidatorTest.RejectsEmptyHeader (0 ms)
+[----------] 1 test from CsvValidatorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"CsvValidatorTest.RejectsEmptyHeader" end time: Oct 21 20:57 PDT
+"CsvValidatorTest.RejectsEmptyHeader" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/25 Testing: AnalyticsTest.BudgetVariance
+15/25 Test: AnalyticsTest.BudgetVariance
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsTest.BudgetVariance" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"AnalyticsTest.BudgetVariance" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = AnalyticsTest.BudgetVariance
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AnalyticsTest
+[ RUN      ] AnalyticsTest.BudgetVariance
+[       OK ] AnalyticsTest.BudgetVariance (0 ms)
+[----------] 1 test from AnalyticsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AnalyticsTest.BudgetVariance" end time: Oct 21 20:57 PDT
+"AnalyticsTest.BudgetVariance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/25 Testing: AnalyticsTest.CompletionPercentage
+16/25 Test: AnalyticsTest.CompletionPercentage
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsTest.CompletionPercentage" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"AnalyticsTest.CompletionPercentage" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = AnalyticsTest.CompletionPercentage
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AnalyticsTest
+[ RUN      ] AnalyticsTest.CompletionPercentage
+[       OK ] AnalyticsTest.CompletionPercentage (0 ms)
+[----------] 1 test from AnalyticsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AnalyticsTest.CompletionPercentage" end time: Oct 21 20:57 PDT
+"AnalyticsTest.CompletionPercentage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/25 Testing: AnalyticsTest.OverdueTasks
+17/25 Test: AnalyticsTest.OverdueTasks
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsTest.OverdueTasks" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"AnalyticsTest.OverdueTasks" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = AnalyticsTest.OverdueTasks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AnalyticsTest
+[ RUN      ] AnalyticsTest.OverdueTasks
+[       OK ] AnalyticsTest.OverdueTasks (0 ms)
+[----------] 1 test from AnalyticsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AnalyticsTest.OverdueTasks" end time: Oct 21 20:57 PDT
+"AnalyticsTest.OverdueTasks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/25 Testing: AnalyticsTest.LaborHours
+18/25 Test: AnalyticsTest.LaborHours
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsTest.LaborHours" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"AnalyticsTest.LaborHours" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = AnalyticsTest.LaborHours
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AnalyticsTest
+[ RUN      ] AnalyticsTest.LaborHours
+[       OK ] AnalyticsTest.LaborHours (0 ms)
+[----------] 1 test from AnalyticsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AnalyticsTest.LaborHours" end time: Oct 21 20:57 PDT
+"AnalyticsTest.LaborHours" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/25 Testing: AnalyticsTest.EmptyData
+19/25 Test: AnalyticsTest.EmptyData
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=AnalyticsTest.EmptyData" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"AnalyticsTest.EmptyData" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = AnalyticsTest.EmptyData
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AnalyticsTest
+[ RUN      ] AnalyticsTest.EmptyData
+[       OK ] AnalyticsTest.EmptyData (0 ms)
+[----------] 1 test from AnalyticsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"AnalyticsTest.EmptyData" end time: Oct 21 20:57 PDT
+"AnalyticsTest.EmptyData" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/25 Testing: DatabaseTest.CreatesTables
+20/25 Test: DatabaseTest.CreatesTables
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.CreatesTables" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.CreatesTables" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.CreatesTables
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.CreatesTables
+[       OK ] DatabaseTest.CreatesTables (11 ms)
+[----------] 1 test from DatabaseTest (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (11 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.CreatesTables" end time: Oct 21 20:57 PDT
+"DatabaseTest.CreatesTables" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/25 Testing: DatabaseTest.InsertAndRead
+21/25 Test: DatabaseTest.InsertAndRead
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.InsertAndRead" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.InsertAndRead" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.InsertAndRead
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRead
+[       OK ] DatabaseTest.InsertAndRead (5 ms)
+[----------] 1 test from DatabaseTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.InsertAndRead" end time: Oct 21 20:57 PDT
+"DatabaseTest.InsertAndRead" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/25 Testing: DatabaseTest.UpdateProject
+22/25 Test: DatabaseTest.UpdateProject
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.UpdateProject" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.UpdateProject" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.UpdateProject
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.UpdateProject
+[       OK ] DatabaseTest.UpdateProject (6 ms)
+[----------] 1 test from DatabaseTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.UpdateProject" end time: Oct 21 20:57 PDT
+"DatabaseTest.UpdateProject" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/25 Testing: DatabaseTest.DuplicateIdThrows
+23/25 Test: DatabaseTest.DuplicateIdThrows
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.DuplicateIdThrows" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.DuplicateIdThrows" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.DuplicateIdThrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.DuplicateIdThrows
+[       OK ] DatabaseTest.DuplicateIdThrows (5 ms)
+[----------] 1 test from DatabaseTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.DuplicateIdThrows" end time: Oct 21 20:57 PDT
+"DatabaseTest.DuplicateIdThrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/25 Testing: DatabaseTest.NegativeBudgetRejected
+24/25 Test: DatabaseTest.NegativeBudgetRejected
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.NegativeBudgetRejected" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.NegativeBudgetRejected" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.NegativeBudgetRejected
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.NegativeBudgetRejected
+[       OK ] DatabaseTest.NegativeBudgetRejected (5 ms)
+[----------] 1 test from DatabaseTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.NegativeBudgetRejected" end time: Oct 21 20:57 PDT
+"DatabaseTest.NegativeBudgetRejected" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/25 Testing: DatabaseTest.CountsSafetyIncidents
+25/25 Test: DatabaseTest.CountsSafetyIncidents
+Command: "/Users/tayamamenko/Developer/Construction-dashboard/build/ConstructionDashboardTests" "--gtest_filter=DatabaseTest.CountsSafetyIncidents" "--gtest_also_run_disabled_tests"
+Directory: /Users/tayamamenko/Developer/Construction-dashboard/build
+"DatabaseTest.CountsSafetyIncidents" start time: Oct 21 20:57 PDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = DatabaseTest.CountsSafetyIncidents
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.CountsSafetyIncidents
+[       OK ] DatabaseTest.CountsSafetyIncidents (5 ms)
+[----------] 1 test from DatabaseTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"DatabaseTest.CountsSafetyIncidents" end time: Oct 21 20:57 PDT
+"DatabaseTest.CountsSafetyIncidents" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 21 20:57 PDT

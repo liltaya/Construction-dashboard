@@ -313,6 +313,9 @@ ConstructionDashboard_SOURCE_DIR:STATIC=/Users/tayamamenko/Developer/Constructio
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//Enable additional compiler warnings
+ENABLE_WARNINGS:BOOL=ON
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/Users/tayamamenko/Developer/Construction-dashboard/build/_deps
 
