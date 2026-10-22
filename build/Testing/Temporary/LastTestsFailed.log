@@ -1,6 +1,0 @@
-20:DatabaseTest.CreatesTables
-21:DatabaseTest.InsertAndRead
-22:DatabaseTest.UpdateProject
-23:DatabaseTest.DuplicateIdThrows
-24:DatabaseTest.NegativeBudgetRejected
-25:DatabaseTest.CountsSafetyIncidents
