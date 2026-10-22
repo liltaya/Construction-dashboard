@@ -1,0 +1,50 @@
+# CMake build directories
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+
+# Qt generated files
+*_autogen/
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# SQLite database
+construction.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+xcuserdata/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Sanitizer and profiling outputs
+*.profraw
+*.profdata
+*.dSYM/
+
+# Release artifacts
+*.app/
+*.dmg
+ConstructionDashboard-macOS.zip
