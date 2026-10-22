@@ -3,6 +3,8 @@
 /build-*/
 /cmake-build-*/
 /out/
+build-sanitized/
+build-release/
 
 # CMake generated files
 CMakeCache.txt
