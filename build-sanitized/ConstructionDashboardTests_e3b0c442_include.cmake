@@ -1,5 +1,0 @@
-if(EXISTS "/Users/tayamamenko/Developer/Construction-dashboard/build-sanitized/ConstructionDashboardTests_e3b0c442_tests.cmake")
-  include("/Users/tayamamenko/Developer/Construction-dashboard/build-sanitized/ConstructionDashboardTests_e3b0c442_tests.cmake")
-else()
-  add_test(ConstructionDashboardTests_NOT_BUILT ConstructionDashboardTests_NOT_BUILT)
-endif()
