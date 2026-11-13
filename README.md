@@ -1,6 +1,10 @@
 # Construction Management Dashboard
 
-A desktop application for monitoring construction projects using **C++17, Qt6, SQLite and CMake**.
+[![CI](https://github.com/liltaya/Construction-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/liltaya/Construction-dashboard/actions/workflows/ci.yml)
+
+A desktop application for monitoring construction projects using **C++20, Qt6, SQLite and CMake**.
+
+![Overview](docs/screenshots/overview.png)
 
 ## Features
 
@@ -22,7 +26,7 @@ A desktop application for monitoring construction projects using **C++17, Qt6, S
 
 | Component | Technology |
 |---|---|
-| Language | C++17 |
+| Language | C++20 |
 | Interface | Qt6 Widgets |
 | Database | SQLite |
 | Build | CMake |
@@ -35,7 +39,7 @@ See [Architecture](docs/architecture.md).
 
 ## Build and Run
 
-Requires CMake, a C++17 compiler, Qt6 Core/Widgets/Sql and the Qt SQLite driver.
+Requires CMake, a C++20 compiler, Qt6 Core/Widgets/Sql and the Qt SQLite driver.
 
 ```bash
 cmake -S . -B build -DBUILD_TESTING=ON
@@ -106,7 +110,5 @@ Import only datasets supported by the application's CSV importer. The files are 
 
 ## Author
 
-GitHub: [liltaya](https://github.com/liltaya)
-
-Repository: [Construction-dashboard](https://github.com/liltaya/Construction-dashboard)
+Taisiia (Taya) Mamenko · [Portfolio](https://liltaya.github.io) · [GitHub](https://github.com/liltaya)
 
